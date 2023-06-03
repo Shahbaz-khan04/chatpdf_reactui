@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+// import { useEffect, useState } from "react";
+import "./App.css";
+import Header from "./components/Header/Header";
+import Cards from "./components/CardComponent/Cards";
+import InputFeild from "./components/InputComponent/InputFeild";
+import Footer from "./components/Footer/Footer";
 
 function App() {
+  // const [name,setName] = useState("");
+
+  // useEffect(()=>{
+
+  //   let data = localStorage.getItem("username")
+  //   console.log("--->",data)
+  //   setName(data)
+  // },[])
+
+  //   function handleClick(){
+  //     let inputValue = document.getElementById("input").value
+  //     setName(inputValue);
+  //     localStorage.setItem("username",inputValue)
+  //   }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App font-custom">
+      <Header />
+      <InputFeild />
+      <Cards />
+      <Footer />
     </div>
   );
 }
