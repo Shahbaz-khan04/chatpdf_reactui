@@ -1,17 +1,20 @@
-// import { useEffect, useState } from "react";
 import "./App.css";
-import Header from "./components/Header/Header";
-import Cards from "./components/CardComponent/Cards";
-import InputFeild from "./components/InputComponent/InputFeild";
-import Footer from "./components/Footer/Footer";
+import Home from "./components/Home"
+import Chat from "./components/Chat"
+import Login from "./components/Login"
+import Register from "./components/Register"
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App font-custom">
-      <Header />
-      <InputFeild />
-      <Cards />
-      <Footer />
+     
+      <Routes>
+        <Route path="/" element={<Home/>} /> 
+        <Route path="/chat" element={<Chat />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
     </div>
   );
 }
